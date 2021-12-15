@@ -52,9 +52,11 @@ export default function App() {
   }
 
   const postNewUser = newUser => {
+   
     axios.post('https://reqres.in/api/users', newUser)
       .then(resp => {
-          setUsers([ resp.data.data, ...users ]);
+        console.log(resp)
+          setUsers([ resp.data, ...users ]);
       }).catch( err => console.error(err))
         .finally(() => setFormValues(initialFormValues))
   }
@@ -81,7 +83,7 @@ export default function App() {
 
   const formSubmit = () => {
     const newUser = {
-      name: formValues.first_name.trim(),
+      first_name: formValues.first_name.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
       confirmPassword: formValues.confirmPassword.trim(),
