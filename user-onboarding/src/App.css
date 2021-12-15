@@ -41,14 +41,14 @@
 .container {
   text-align: center;
   line-height: 1.5rem;
-  background-color: #282c34;
   color: azure;
+
 }
 .form-group .input{
   display: flex;
-  justify-content: column;
   text-align: center;
-  line-height: 1.5rem;
   padding-left: 20%;
   padding-right: 20%;
+
+  
 }
