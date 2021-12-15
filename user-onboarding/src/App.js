@@ -71,7 +71,7 @@ export default function App() {
   //////////////// EVENT HANDLERS ////////////////
   //////////////// EVENT HANDLERS ////////////////
   const inputChange = (name, value) => {
-  console.log(name)
+  
     validate(name, value);
     setFormValues({
       ...formValues,

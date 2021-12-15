@@ -25,12 +25,7 @@ export default function FriendForm(props) {
     <form className='form container' onSubmit={onSubmit}>
       <div className='form-group submit'>
         <h2>Add a new User!</h2>
-
-        
-        <button disabled={disabled}>submit</button>
-
         <div className='errors'>
-         
           <div>{errors.name}</div>
           <div>{errors.email}</div>
           <div>{errors.password}</div>
@@ -41,39 +36,50 @@ export default function FriendForm(props) {
 
       <div className='form-group inputs'>
         <h4>New User Sign-up</h4>
-        <label>Name&nbsp;
+        <div><label>Name&nbsp;
+            <div>
           <input
             value={values.first_name}
             onChange={onChange}
             name='first_name'
             type='text'
-          />
+          /></div>
         </label>
+        </div>
 
-        <label>Email
+        <div><label>Email
+            <div>
           <input
             value={values.email}
             onChange={onChange}
             name='email'
             type='text'
-          />
+          /></div>
         </label>
+        </div>
+
+        <div>
         <label>Password
+            <div>
           <input
             value={values.password}
             onChange={onChange}
             name='password'
             type='text'
-          />
+          /></div>
         </label>
+        </div>
+        <div>
         <label>Confirm Password
+            <div>
           <input
             value={values.confirmPassword}
             onChange={onChange}
             name='confirmPassword'
             type='text'
-          />
+          /></div>
         </label>
+        </div>
       </div>
 
       <div className='form-group checkboxes'>
@@ -85,7 +91,9 @@ export default function FriendForm(props) {
             name='termsOfService'
           />
         </label>
+        
       </div>
+      <button disabled={disabled}>submit</button>
     </form>
   )
 }
