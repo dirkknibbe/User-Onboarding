@@ -62,10 +62,11 @@ export default function FriendForm(props) {
         <label>Password
             <div>
           <input
+            
             value={values.password}
             onChange={onChange}
             name='password'
-            type='text'
+            type={'password'}
           /></div>
         </label>
         </div>
